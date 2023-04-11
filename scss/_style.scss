@@ -1,0 +1,447 @@
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+@include media-breakpoint-up(md) {
+
+    .heroLogo,
+    .heroLogo img {
+        max-width: 270px;
+    }
+}
+
+.nav_module {
+    background: radial-gradient(71.15% 160.71% at 71.15% 50%, #32323E 0%, #15151B 100%);
+    padding: 30px 0;
+}
+
+
+header {
+    background: radial-gradient(71.15% 160.71% at 71.15% 50%, $grey 0%, $dark 100%);
+
+    .navigation {
+        padding: 30px 0;
+    }
+
+    .banner {
+        background-size: cover;
+        color: $white;
+        padding: 57px 0 80px;
+        position: relative;
+
+        .banner-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: multiply;
+        }
+
+        .loanwidget {
+            padding: 44px 37px;
+            background: $white;
+            border-radius: 20px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 23px 22px;
+            }
+
+            .box {
+                transition: all .5s ease-in-out;
+                background-color: rgba(50, 8, 115, .1019607843);
+
+                img {
+                    transition: all .5s ease-in-out;
+                }
+
+                &:hover {
+                    background-color: #c8a9f9;
+                    transform: scale(1.05);
+                }
+
+                .loanwidget .box:hover img {
+                    filter: grayscale(0)
+                }
+            }
+
+            .loanwidgetfieldgroup {
+                width: 100%;
+
+                &.hidden {
+                    display: none;
+                }
+
+                .multi-step-form .form-control {
+                    font-size: calc(1.525rem + .45vw)
+                }
+            }
+
+            .box.active,
+            .box.active2 {
+                --bs-bg-opacity: 1;
+                transform: scale(1.05)
+            }
+
+            .rangeform {
+                #yeartext {
+                    padding-top: .5625rem;
+                }
+
+                .slider {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 25px;
+                    background: $tertiary;
+                    outline: none;
+                    border-radius: 50rem;
+
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 48px;
+                        height: 48px;
+                        background: #fff;
+                        border-radius: 50rem;
+                        cursor: pointer;
+                        box-shadow: 0 0 10px;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        height: 16px;
+
+                        &::-webkit-slider-thumb {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
+                input {
+                    outline: none;
+                }
+
+                .years {
+                    .text-col {
+                        width: 80px !important;
+
+                        @include media-breakpoint-down(lg) {
+                            width: 75px !important;
+                        }
+                    }
+
+                    input.text {
+                        max-width: 100% !important;
+                        width: auto !important
+                    }
+                }
+
+                .slider1_parent {
+                    font-size: 64px;
+                    line-height: 1;
+                    color: #d7d7dc;
+                    font-weight: bold;
+                    font-family: articulat-cf, sans-serif;
+                    margin-left: 0;
+
+                    .title {
+                        margin: 0;
+                        line-height: 1;
+                    }
+
+                    input {
+                        font-family: articulat-cf, sans-serif;
+                        border: none;
+                        height: 64px;
+                        color: #d7d7dc;
+                        font-weight: bold;
+                        outline: none;
+                        width: 50%;
+                        margin: 0
+                    }
+
+                    .main_block {
+                        .groove_parent {
+                            height: 52px;
+                            margin: 0;
+
+                            .groove {
+                                border: none;
+                                height: 34px;
+                                border-radius: 50rem;
+
+                                .fill {
+                                    height: 34px;
+                                    background: #5614bb !important;
+                                }
+                            }
+
+                            .rider {
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 50rem;
+                                border: none;
+                            }
+                        }
+                    }
+
+                    .slider_range {
+                        display: none;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 38px;
+                        line-height: 1;
+
+                        .title {
+                            font-size: 30px
+                        }
+
+                        input {
+                            height: 38px;
+                            font-size: 30px;
+                            width: 80%;
+                            line-height: 1;
+                            display: inline-block
+                        }
+
+                        .main_block .groove_parent {
+                            height: 24px;
+
+                            .groove {
+                                height: 13px;
+
+                                .fill {
+                                    height: 13px;
+                                }
+                            }
+
+                            .rider {
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .years .slider1_parent input {
+                    float: left;
+                    width: 12%;
+                }
+
+                select {
+                    background-color: rgba(0, 0, 0, 0);
+                    border: none;
+                    font-size: 64px;
+                    line-height: 1;
+                    font-weight: bold;
+                    color: #d7d7dc;
+                    outline: none;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 38px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.servicing-areas {
+    padding: 160px 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    #areas-slider {
+        .slick-track {
+            margin-left: -46px;
+        }
+
+        .slick-slide {
+            margin: 0 4px;
+        }
+    }
+
+    .area_card {
+        min-height: 350px;
+        height: 100%;
+        padding: 30px 16px;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+
+        .card_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .area {
+            border-radius: 20px;
+            border: 2px solid $white;
+            font-size: 1.25rem;
+            line-height: 1;
+            font-family: $font-kamerik;
+            font-weight: 600;
+            position: relative;
+            display: inline-flex;
+            padding: 12px 16px;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            gap: 10px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+section.financing {
+    padding: 160px 0;
+    background: $light;
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    .financing_card {
+        min-height: 218px;
+    }
+
+    .financing_card_more_list {
+        min-height: 80px;
+    }
+
+    .financing_card,
+    .financing_card_more_list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        gap: 20px;
+        filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.05));
+        color: $primary;
+        font-size: 1.25rem;
+        font-weight: 700;
+        border-radius: 6px;
+        font-family: $font-kamerik;
+
+        &.more {
+            background: linear-gradient(180deg, $secondary 0%, $primary 100%);
+            color: $white;
+            font-weight: 600;
+            min-height: 100px;
+            text-decoration: none;
+        }
+    }
+
+    #moreUtes {
+        display: none;
+    }
+}
+
+section.about-us {
+    padding: 160px 0;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    #about-slider {
+        .slick-track {
+            margin-left: -46px;
+        }
+
+        .slick-slide {
+            margin: 0 4px;
+        }
+    }
+
+    .about-us-card {
+        height: 100%;
+        background: $light;
+        border-radius: 6px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: $font-kamerik;
+
+        .icon {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+section.speak-with-us {
+    background: radial-gradient(74.95% 74.95% at 50% 25.05%, $tertiary 0%, $primary 100%);
+    border-radius: 6px;
+    ;
+}
+
+section.lenders {
+    padding: 160px 0;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    #lenders-slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+        }
+
+        .slick-dots {
+            li {
+                height: 10px;
+                width: 10px;
+
+                button {
+                    padding: 0;
+                    height: 10px;
+                    width: 10px;
+
+                    &::before {
+                        height: 10px;
+                        background: $primary;
+                        border-radius: 50%;
+                        content: "";
+                        opacity: 0.2;
+                        width: 10px;
+                        line-height: 1;
+                    }
+                }
+
+                &.slick-active button::before {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 20px 0;
+    font-size: 0.875rem;
+    font-family: $font-kamerik;
+    background-color: $dark;
+
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0;
+    }
+}
