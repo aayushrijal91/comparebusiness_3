@@ -19,15 +19,6 @@ include __DIR__ . '/src/nav.php';
     }
 </style>
 
-<!-- Event snippet for Application Form (Business Finance 3)** conversion page -->
-
-<script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-714867981/eD1tCI6hqpcYEI2K8NQC'
-    });
-</script>
-
-
 <!-- Inner Banner Normal -->
 <section class="inner_banner_wrap normal_inner_banner text-primary pb-lg-10 pb-5 mt-lg-10">
     <div class="inner_bnr_block">
@@ -39,10 +30,11 @@ include __DIR__ . '/src/nav.php';
 </section>
 
 <!-- End -->
-<!-- Event snippet for Find My Lender Match Form conversion page -->
+
+<!-- Event snippet for Application Form (Business Finance 3)** conversion page -->
 <script>
     gtag('event', 'conversion', {
-        'send_to': 'AW-600985749/rOeECIiB9uQDEJWhyZ4C'
+        'send_to': 'AW-714867981/eD1tCI6hqpcYEI2K8NQC'
     });
 </script>
 
